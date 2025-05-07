@@ -1,12 +1,22 @@
-// ## Corrigir Valor Numérico **(1 ponto)**
+// Classificador de Nota (1 ponto)
 
 // **Enunciado:**
 
-// Crie a função corrigirValor, que recebe um valor e tenta convertê-lo para número. Se não for possível, retorne `"Valor inválido"`.
+// Implemente a função classificarNota, que receba uma nota e:
 
-function corrigirValor(valor) {
-  // TODO: implementar função
+// - Retorna `"Aprovado"` se nota ≥ 6;
+// - Retorna `"Reprovado"` se nota < 6;
+// - Retorna `"Nota inválida"` se for um valor fora de 0 a 10 ou não numérico.
+
+function classificarNota(nota) {
+  if (nota < 0 || nota > 10) {
+    return 'Nota inválida'
+  } else if (nota < 6){
+    return 'Reprovado'
+  } else if (nota >= 6){
+    return 'Aprovado'
+  }
 }
 
 //NÃO REMOVA O CÓDIGO ABAIXO
-module.exports = { corrigirValor };
+module.exports = { classificarNota };
