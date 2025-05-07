@@ -8,13 +8,13 @@ function somar(a, b) {
   b = parseInt(b)
   let resultado = a + b;
   if (typeof(resultado) == 'number'){
-    if (resultado != NaN){
-      return resultado
-    }else if (resultado == NaN){
+    if (resultado == NaN){
       return "Parâmetro inválido"
     }
+      return resultado
+    }
   }
-}
+
 
   
   // Testando a função
